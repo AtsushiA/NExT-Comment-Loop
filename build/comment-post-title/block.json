@@ -1,0 +1,24 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "next/comment-post-title",
+  "version": "1.0.0",
+  "title": "Comment Post Title",
+  "category": "theme",
+  "description": "コメントが付いた投稿のタイトルを表示するブロックです。",
+  "textdomain": "next-comment-loop",
+  "parent": [
+    "next/comment-loop"
+  ],
+  "attributes": {
+    "isLink": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "usesContext": [
+    "next/commentId"
+  ],
+  "editorScript": "next-comment-loop-editor",
+  "render": "file:./render.php"
+}

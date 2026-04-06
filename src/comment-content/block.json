@@ -1,0 +1,14 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "next/comment-content",
+  "version": "1.0.0",
+  "title": "Comment Content",
+  "category": "theme",
+  "description": "コメントの内容を表示するブロックです。",
+  "textdomain": "next-comment-loop",
+  "parent": [ "next/comment-loop" ],
+  "usesContext": [ "next/commentId" ],
+  "editorScript": "next-comment-loop-editor",
+  "render": "file:./render.php"
+}

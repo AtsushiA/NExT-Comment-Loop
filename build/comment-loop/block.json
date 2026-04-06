@@ -1,0 +1,31 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "next/comment-loop",
+  "version": "1.1.0",
+  "title": "Comment Loop",
+  "category": "theme",
+  "description": "指定した投稿タイプのコメントをループ表示するブロックです。",
+  "textdomain": "next-comment-loop",
+  "attributes": {
+    "sortOrder": {
+      "type": "string",
+      "default": "date_desc"
+    },
+    "number": {
+      "type": "integer",
+      "default": 10
+    },
+    "postTypes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "default": [
+        "post"
+      ]
+    }
+  },
+  "editorScript": "next-comment-loop-editor",
+  "render": "file:./render.php"
+}

@@ -1,0 +1,15 @@
+# Dependencies
+node_modules/
+
+# Build artifacts are committed for WordPress plugin distribution
+# build/
+
+# macOS
+.DS_Store
+
+# Editor
+.vscode/
+.idea/
+
+# npm logs
+npm-debug.log*
