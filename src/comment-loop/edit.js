@@ -14,13 +14,6 @@ import {
 import { useSelect } from '@wordpress/data';
 import { store as coreStore } from '@wordpress/core-data';
 
-const ALLOWED_BLOCKS = [
-	'next/comment-date',
-	'next/comment-author',
-	'next/comment-content',
-	'next/comment-post-title',
-];
-
 const TEMPLATE = [
 	[ 'next/comment-date' ],
 	[ 'next/comment-author' ],
@@ -116,7 +109,6 @@ export default function Edit( { attributes, setAttributes } ) {
 			</InspectorControls>
 			<div { ...blockProps }>
 				<InnerBlocks
-					allowedBlocks={ ALLOWED_BLOCKS }
 					template={ TEMPLATE }
 				/>
 			</div>
