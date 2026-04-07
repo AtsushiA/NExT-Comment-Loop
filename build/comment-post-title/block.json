@@ -2,7 +2,7 @@
   "$schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 3,
   "name": "next/comment-post-title",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "title": "Comment Post Title",
   "category": "theme",
   "description": "コメントが付いた投稿のタイトルを表示するブロックです。",
@@ -19,6 +19,35 @@
   "usesContext": [
     "next/commentId"
   ],
+  "supports": {
+    "html": false,
+    "color": {
+      "text": true,
+      "background": true,
+      "gradients": true,
+      "link": true
+    },
+    "typography": {
+      "fontSize": true,
+      "lineHeight": true,
+      "fontFamily": true,
+      "fontWeight": true,
+      "fontStyle": true,
+      "letterSpacing": true,
+      "textDecoration": true,
+      "textTransform": true
+    },
+    "spacing": {
+      "margin": true,
+      "padding": true
+    },
+    "__experimentalBorder": {
+      "color": true,
+      "radius": true,
+      "style": true,
+      "width": true
+    }
+  },
   "editorScript": "next-comment-loop-editor",
   "render": "file:./render.php"
 }
