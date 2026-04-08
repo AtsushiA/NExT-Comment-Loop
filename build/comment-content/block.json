@@ -2,12 +2,12 @@
   "$schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 3,
   "name": "next/comment-content",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "title": "Comment Content",
   "category": "theme",
   "description": "コメントの内容を表示するブロックです。",
   "textdomain": "next-comment-loop",
-  "parent": [
+  "ancestor": [
     "next/comment-loop"
   ],
   "usesContext": [

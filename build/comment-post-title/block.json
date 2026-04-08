@@ -2,12 +2,12 @@
   "$schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 3,
   "name": "next/comment-post-title",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "title": "Comment Post Title",
   "category": "theme",
   "description": "コメントが付いた投稿のタイトルを表示するブロックです。",
   "textdomain": "next-comment-loop",
-  "parent": [
+  "ancestor": [
     "next/comment-loop"
   ],
   "attributes": {
