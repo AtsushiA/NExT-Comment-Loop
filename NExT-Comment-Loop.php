@@ -2,10 +2,11 @@
 /**
  * Plugin Name: NExT Comment Loop
  * Description: コメント一覧を表示するGutenbergブロックプラグイン。コメントループ・日時・投稿者名・内容の各ブロックを提供します。
- * Version:     1.1.3
+ * Version:     1.1.4
  * Requires at least: 6.4
  * Requires PHP: 8.0
- * Author:      NExT
+ * Author:      NExT-Season
+ * Author URI:  https://next-season.net/
  * License:     GPL-2.0-or-later
  * Text Domain: next-comment-loop
  * Domain Path: /languages

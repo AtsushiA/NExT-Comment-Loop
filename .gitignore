@@ -1,5 +1,13 @@
 # Dependencies
 node_modules/
+vendor/
+
+# wp-env
+.wp-env.override.json
+
+# Test cache
+.phpunit.result.cache
+test-results/
 
 # Build artifacts are committed for WordPress plugin distribution
 # build/
