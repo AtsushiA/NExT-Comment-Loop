@@ -9,6 +9,10 @@
  * @param WP_Block $block      ブロックインスタンス。
  */
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 // ソート順の検証（allowlist）.
 $allowed_orders = array( 'date_asc', 'date_desc' );
 $sort_order     = isset( $attributes['sortOrder'] ) && in_array( $attributes['sortOrder'], $allowed_orders, true )

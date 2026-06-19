@@ -57,7 +57,9 @@ jobs:
           composer install --no-interaction
       - name: Install WordPress test suite
         # 引数: <db-name> <db-user> <db-pass> <db-host> <wp-version> <skip-db-create>
-        run: bash bin/install-wp-tests.sh wordpress_test root root 127.0.0.1 ${{ matrix.wp }} true
+        # MYSQL_DATABASE を設定していないため DB は未作成。第6引数 false で
+        # スクリプトに作成させる（既存 DB が無いので対話プロンプトは発生しない）。
+        run: bash bin/install-wp-tests.sh wordpress_test root root 127.0.0.1 ${{ matrix.wp }} false
       - name: Run PHPUnit (unit)
         # Unit テストは WordPress を読み込まない既定 bootstrap で実行する。
         run: vendor/bin/phpunit --testsuite unit
@@ -75,6 +77,9 @@ jobs:
       - uses: wordpress/plugin-check-action@v1
         with:
           exclude-directories: 'vendor,tests,node_modules'
+          # i18n_usage はフォルダ名（NExT-Comment-Loop）由来の期待テキストドメインと
+          # 正規の小文字テキストドメイン（next-comment-loop）の不一致のみを検出するため除外。
+          exclude-checks: 'i18n_usage'
           ignore-warnings: true
           categories: |
             general

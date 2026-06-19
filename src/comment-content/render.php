@@ -9,6 +9,10 @@
  * @param WP_Block $block      ブロックインスタンス。
  */
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 $comment_id = $block->context['next/commentId'] ?? 0;
 if ( ! $comment_id ) {
 	return;
