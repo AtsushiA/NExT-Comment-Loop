@@ -5,7 +5,8 @@
  * Version:     1.1.3
  * Requires at least: 6.4
  * Requires PHP: 8.0
- * Author:      NExT
+ * Author:      NExT-Season
+ * Author URI:  https://next-season.net/
  * License:     GPL-2.0-or-later
  * Text Domain: next-comment-loop
  * Domain Path: /languages

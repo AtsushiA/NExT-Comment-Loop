@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<ruleset name="NExT Comment Loop">
+	<description>Custom ruleset for NExT Comment Loop</description>
+
+	<!-- 対象ファイル -->
+	<file>./NExT-Comment-Loop.php</file>
+	<file>./src/</file>
+
+	<!-- 除外 -->
+	<exclude-pattern>./vendor/*</exclude-pattern>
+	<exclude-pattern>./node_modules/*</exclude-pattern>
+	<exclude-pattern>./tests/*</exclude-pattern>
+	<exclude-pattern>./build/*</exclude-pattern>
+	<exclude-pattern>*.js</exclude-pattern>
+
+	<!-- PHP ファイルのみ検査 -->
+	<arg name="extensions" value="php"/>
+
+	<!-- WordPress Coding Standards -->
+	<rule ref="WordPress">
+		<!--
+		メインファイル名は配布済み slug（NExT-Comment-Loop.php）に合わせており
+		リネームすると既存インストールの更新経路が壊れるため、命名規則を除外する。
+		-->
+		<exclude name="WordPress.Files.FileName.NotHyphenatedLowercase"/>
+	</rule>
+
+	<!--
+	ブロックの render.php テンプレートは WordPress により関数スコープ内で include される。
+	トップレベル変数はグローバルではないため、プレフィックス／グローバル上書きの
+	検査は誤検出となる。render.php に限り除外する。
+	-->
+	<rule ref="WordPress.NamingConventions.PrefixAllGlobals">
+		<exclude-pattern>*/render.php</exclude-pattern>
+	</rule>
+	<rule ref="WordPress.WP.GlobalVariablesOverride">
+		<exclude-pattern>*/render.php</exclude-pattern>
+	</rule>
+
+	<!-- PHP互換性チェック -->
+	<rule ref="PHPCompatibilityWP"/>
+
+	<!-- PHP バージョン -->
+	<config name="testVersion" value="8.0-"/>
+
+	<!-- テキストドメイン -->
+	<config name="text_domain" value="next-comment-loop"/>
+
+	<!-- プレフィックス -->
+	<config name="prefixes" value="next_comment_loop,next"/>
+
+	<!-- 最低 WP バージョン -->
+	<config name="minimum_wp_version" value="6.4"/>
+</ruleset>

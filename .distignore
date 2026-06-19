@@ -1,0 +1,22 @@
+# 配布 zip に含めないファイル/ディレクトリ
+.git
+.github
+.husky
+node_modules
+vendor
+tests
+src
+bin
+.wp-env.json
+.wp-env.override.json
+package.json
+package-lock.json
+composer.json
+composer.lock
+phpcs.xml.dist
+phpunit.xml.dist
+.gitignore
+.distignore
+.editorconfig
+.phpunit.result.cache
+SPEC.md

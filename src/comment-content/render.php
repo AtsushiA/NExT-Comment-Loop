@@ -2,6 +2,8 @@
 /**
  * Comment Content ブロックのサーバーサイドレンダリング。
  *
+ * @package next-comment-loop
+ *
  * @param array    $attributes ブロック属性。
  * @param string   $content    保存済みコンテンツ（未使用）。
  * @param WP_Block $block      ブロックインスタンス。
