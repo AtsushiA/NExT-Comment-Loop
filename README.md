@@ -1,5 +1,7 @@
 # NExT Comment Loop
 
+[![Try in WordPress Playground](https://img.shields.io/badge/Try%20in-WordPress%20Playground-3858e9?logo=wordpress)](https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/AtsushiA/NExT-Comment-Loop/main/blueprint.json)
+
 WordPress Gutenberg ブロックプラグイン。**固定ページに設置し、指定した投稿タイプのコメントをループ表示します。**
 
 ## 機能
